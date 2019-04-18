@@ -1,13 +1,15 @@
-Attribute VB_Name = "systemButton"
-'created by nandur93 12/07/2017 http://nandur93.blogspot.com/VBA
+'Attribute VB_Name = "systemButton"
+'created by nandur93 12/07/2017 https://nandur93.com/VBA
+'updated 18/04/2019
 'library ini untuk tutup form menggunakan X merah pojok kiri atas
-'this library as to ask user some action if RED X button clicked
+'this library is to ask user some action if RED X button clicked
+'copy and paste this code to your form module
 Private Sub UserForm_QueryClose(Cancel As Integer, CloseMode As Integer)
     'when X button clicked
     If CloseMode = 0 Then 'ketika X di klik
         'defined as integer
         Dim xClose As Integer 'dim variablenya sebagai integer
-        'ask user 2 question before quit between YES or NO
+        'ask user two question before quit between YES or NO
         xClose = MsgBox("Tutup Form?", vbYesNo + vbQuestion, "Keluar") 'tanyakan mau keluar apa tidak
             'if YES button clicked
             If xClose = vbYes Then 'jika klik IYA
